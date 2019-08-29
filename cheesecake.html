@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Cheesecake</title>
 </head>
 <body>
-    Cheesecake
-</body>
-</html>
+    <header>
+        <nav>
+            <a href="index.html"><p class="logo">Mama's Bakery</p></a>
+            <img class="menu-icon" src="img/png/menu.png" alt="Меню">
+            <ul>
+                <li><a href="index.html#about">Про нас</a></li>
+                <li><a href="index.html#our-cakes">Торти</a></li>
+                <li><a href="index.html#reviews">Відгуки</a></li>
+                <li><a href="index.html#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cake">
+            <div class="cake-img">
+                <img src="img/cheese-buy-desktop.jpg" alt="Чізкейк Нью-Йорк">
+                <img src="img/cheese-buy-mobile.jpg" alt="Чізкейк Нью-Йорк">
+            </div>
+            <div class="cake-text">
+                <h2>Чізкейк Нью-Йорк</h2>
+                <p class="cake-text">Традиційний чізкейк з начинкою з вершкового сиру та основою з пісочного печива.</p>
+                <p class="cake-text">Склад: крем-сир, мука, масло, цукор, яйця, сіль.</p>
+                <p class="cake-text">Калорійність: 504 Ккал</p>
+                <p class="cake-text">Термін придатності: 3 дні</p>
+                <p class="price">450 грн.</p>
+                <p class="weight">950 г</p>
+            </div>
+            <form class="buy-form">
+                <label>
+                    <input type="checkbox" name="no-shugar" value="no-shugar">Без цукру
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="no-gluten" value="no-gluten">Без глютену
+                </label>
+                <br>
+                <input type="number" name="amount">
+                <br>
+                <input type="submit" value="Купити">
+            </form>
+        </section>
+        <section id="try">
+            <h2>Спробуй також</h2>
+            <div class="try-box">
+                <div class="try-item">
+                    <img src="img/brownie.jpg" alt="Брауні">
+                    <h3 class="try-item-heading">Брауні</h3>
+                    <p class="try-item-paragraph">
+                        Знамените шоколадне тістечко з карамельною текстурою та насиченим какао-смаком.
+                    </p>
+                    <button onclick="location.href='/#TODO'">Хочу</button>
+                </div>
+                <div class="try-item">
+                    <img src="img/pumpkin.jpg" alt="Гарбузовий пиріг">
+                    <h3 class="try-item-heading">Гарбузовий пиріг</h3>
+                    <p class="try-item-paragraph">
+                        Ніжна й ароматна гарбузово-вершкова начинка та крихка основа.
+                    </p>
+                    <button onclick="location.href='/#TODO'">Хочу</button>
+                </div>
+            </div>
+        </section>
+        <section id="contacts">
+            <h2>Контакти</h2>
+            <div class="contact information">
+                <p class="contacts-text">
+                    м.Львів, вул.Федьковича 60а
+                </p>
+                <p class="contacts-text">
+                    1-ий поверх
+                </p>
+                <p class="contacts-text">
+                    тел. +38(032)2356898
+                </p>
+                <p class="contacts-text">
+                    Працюємо щодня з 10:00 до 22:00
+                </p>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/"><img src="img/png/fb.png" alt="Facebook" ></a>
+            </div>
+        </section>
+
+    </main>
