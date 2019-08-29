@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
+
+:root {
+    --logo-background-color: #444444;
+}
+
+header {
+    background-color: var(--logo-background-color);
+    margin: 0 0;
+}
+
+header nav .logo {
+    font-family: 'Arizonia', sans-sarif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+    margin: 0 0;
+}
+
+header nav .menu-icon {
+    width: 40px;
+}
+
+header nav .menu
+
+
+
+
