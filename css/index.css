@@ -2,27 +2,71 @@
 
 :root {
     --logo-background-color: #444444;
+    --about-background-color: #e6e6e6;
 }
 
-header {
-    background-color: var(--logo-background-color);
+body {
     margin: 0 0;
 }
 
-header nav .logo {
+header nav .logo-container {
+    background-color: var(--logo-background-color);
+    margin: 0 0;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .logo-container .logo {
     font-family: 'Arizonia', sans-sarif;
     font-size: 40px;
     font-weight: bold;
     color: white;
-    padding-left: 10px;
+    padding: 10px;
     margin: 0 0;
 }
 
-header nav .menu-icon {
+header nav .logo-container .menu-icon {
     width: 40px;
+    height: 30px;
+    padding-right: 20px;
 }
 
-header nav .menu
+header nav .menu {
+    display: none;
+}
+
+@media(min-width: 570px){
+    header nav .menu {
+        display: flex;
+        padding-left: 10%;
+        padding-right: 10%;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+
+    header nav .menu li a {
+        text-decoration: none;
+        color: black;
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        padding: 5px 20px 5px 20px;
+
+    }
+
+    header nav .menu li a:hover {
+        background-color: #e6e6e6;
+    }
+
+    header nav .logo-container .menu-icon {
+        display: none;
+    }
+
+    header nav .logo-container{
+        justify-content: center;
+    }
+}
 
 
 
