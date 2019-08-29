@@ -52,11 +52,10 @@ header nav .menu {
         font-family: Helvetica, sans-serif;
         font-size: 20px;
         padding: 5px 20px 5px 20px;
-
     }
 
     header nav .menu li a:hover {
-        background-color: #e6e6e6;
+        background-color: var(--about-background-color);
     }
 
     header nav .logo-container .menu-icon {
@@ -67,6 +66,7 @@ header nav .menu {
         justify-content: center;
     }
 }
+
 
 
 
