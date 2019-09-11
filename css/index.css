@@ -3,10 +3,17 @@
 :root {
     --logo-background-color: #444444;
     --about-background-color: #e6e6e6;
+    --body-font-color: #606060;
+    --title-font-color: #232323;
+    --background-color: #ebebeb;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0 auto;
+    font-family: 'Helvetica', sans-sarif;
+    font-size: 15px;
+    color: var(--body-font-color);
 }
 
 .container-max-width {
@@ -42,15 +49,6 @@ header nav .menu {
     display: none;
 }
 
-main #about .mobile-cacke {
-    width: 100%;
-    }
-
-
-main #about .descktop-cacke {
-    display: none;
-}
-
 @media(min-width: 570px){
     header nav .menu {
         display: flex;
@@ -79,17 +77,108 @@ main #about .descktop-cacke {
     header nav .logo-container{
         justify-content: center;
     }
+}
 
-    main #about .descktop-cacke {
+h2 {
+    text-align: center;
+    font-size: 25px;
+    padding: 2%;
+}
+
+.title-black {
+    color: var(--title-font-color);
+}
+
+main #about .mobile-cake {
     display: block;
     width: 100%;
     }
 
-    main #about .mobile-cacke {
+main #about .descktop-cake {
+    display: none;
+}
+
+main #about .article {
+    padding: 0 3% 8% 3%
+}
+
+@media(min-width: 570px){
+    main #about {
+    background-color: var(--background-color);
+    }
+
+    main #about .descktop-cake {
+    display: block;
+    width: 100%;
+    }
+
+    main #about .mobile-cake {
     display: none;
     }
 
+    main #about .article  {
+    padding: 0 8% 5% 8%
+    }
+}
 
+main #our-cakes h2 {
+    display: none;
+}
+
+main #our-cakes .cakes-box {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main #our-cakes .cakes-box .cake-item {
+    display: flex;
+}
+
+main #our-cakes .cakes-box .cake-item .cake-item-img {
+    min-width: 50%;
+}
+
+main #our-cakes .cakes-box .cake-item .cake-item-img img {
+    display: block;
+    width: 100%;
+}
+
+main #our-cakes .cakes-box .cake-item .cake-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cake-item-heading {
+    color: var(--logo-background-color);
+}
+
+.cake-item-paragraph {
+    text-align: center;
+    font-size: 0.85em;
+}
+
+
+@media(min-width: 570px){
+    main #our-cakes {
+    padding-bottom: 8%;
+    }
+
+    main #our-cakes h2 {
+    display: block;
+    }
+
+    main #our-cakes .cakes-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 6%;
+    padding: 0 6% 0 6%
+    }
+
+    main #our-cakes .cakes-box .cake-item {
+    display: flex;
+    flex-direction: column;
+    }
 }
 
 
