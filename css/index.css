@@ -6,6 +6,7 @@
     --body-font-color: #606060;
     --title-font-color: #232323;
     --background-color: #ebebeb;
+    --button-border: #aaaaaa;
     scroll-behavior: smooth;
 }
 
@@ -104,20 +105,20 @@ main #about .article {
 
 @media(min-width: 570px){
     main #about {
-    background-color: var(--background-color);
+        background-color: var(--background-color);
     }
 
     main #about .descktop-cake {
-    display: block;
-    width: 100%;
+        display: block;
+        width: 100%;
     }
 
     main #about .mobile-cake {
-    display: none;
+        display: none;
     }
 
     main #about .article  {
-    padding: 0 8% 5% 8%
+        padding: 0 8% 5% 8%
     }
 }
 
@@ -147,6 +148,27 @@ main #our-cakes .cakes-box .cake-item .cake-item-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+main #our-cakes .cakes-box .cake-item .cake-item-content .want {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid var(--button-border);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: var(--about-background-color);
+}
+
+main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .cake-item-heading {
@@ -161,23 +183,23 @@ main #our-cakes .cakes-box .cake-item .cake-item-content {
 
 @media(min-width: 570px){
     main #our-cakes {
-    padding-bottom: 8%;
+        padding-bottom: 8%;
     }
 
     main #our-cakes h2 {
-    display: block;
+        display: block;
     }
 
     main #our-cakes .cakes-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 6%;
-    padding: 0 6% 0 6%
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 6%;
+        padding: 0 6% 0 6%
     }
 
     main #our-cakes .cakes-box .cake-item {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
 }
 
