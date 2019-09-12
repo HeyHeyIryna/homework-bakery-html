@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mama's Bakery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -12,7 +13,19 @@
         <nav>
             <div class="logo-container">
                 <p class="logo">Mama's Bakery</p>
-                <img class="menu-icon" src="img/png/menu-icon.png" alt="Меню">
+                <img class="menu-icon" src="img/png/menu-icon.png" alt="Меню" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            </div>
+            <div class="pos-f-t">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <ul class="menu-drop">
+                            <li><a class="menu-drop-li-a" href="#about">Про нас</a></li>
+                            <li><a class="menu-drop-li-a" href="#our-cakes">Торти</a></li>
+                            <li><a class="menu-drop-li-a" href="#reviews">Відгуки</a></li>
+                            <li><a class="menu-drop-li-a" href="#contacts">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="container-max-width">
                 <ul class="menu">
@@ -79,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <!--
+
         <section id="reviews">
             <h2>Відгуки</h2>
             <div class="reviev-item">
@@ -90,7 +103,39 @@
                     Андрій
                 </p>
             </div>
+
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="carousel-item">
+        <p>Eos impedit animi tempora dolorum. </p>
+    </div>
+    <div class="carousel-item">
+      <p>Dignissimos qui quos soluta, accusamus iusto, incidunt reprehenderit consequuntur earum, nostrum sed eum corrupti corporis unde eius.</p>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
         </section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+        <!--
         <section id="feedback">
             <img src="img/white-pie.jpg" alt="Білий чізкейк">
             <img src="img/black-pie.jpg" alt="Чорний чізкейк">
@@ -129,5 +174,9 @@
             </div>
         </section>
     </footer>-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

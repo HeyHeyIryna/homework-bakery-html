@@ -45,6 +45,40 @@ header nav .logo-container .menu-icon {
     width: 40px;
     height: 30px;
     padding-right: 20px;
+    box-sizing: content-box;
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: none;
+}
+
+.bg-dark {
+    background-color: var(--body-font-color)!important;
+    border: 1px solid black;
+    border-top: none;
+}
+
+header nav .menu-drop {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+
+header nav .menu-drop li {
+    padding: 7px;
+}
+
+header nav .menu-drop .menu-drop-li-a{
+    text-decoration: none;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+header nav .menu-drop li:hover {
+    background-color: #7a7a7a;
+    cursor: pointer;
 }
 
 header nav .menu {
@@ -58,6 +92,7 @@ header nav .menu {
         padding-right: 10%;
         list-style-type: none;
         justify-content: space-around;
+        margin-top: 15px;
     }
 
     header nav .menu li a {
@@ -76,6 +111,10 @@ header nav .menu {
         display: none;
     }
 
+    .pos-f-t{
+        display: none;
+    }
+
     header nav .logo-container{
         justify-content: center;
     }
@@ -85,6 +124,7 @@ h2 {
     text-align: center;
     font-size: 25px;
     padding: 2%;
+    margin-top: 10px;
 }
 
 .title-black {
@@ -125,6 +165,10 @@ main #about .article {
 
 main #our-cakes h2 {
     display: none;
+}
+
+h3 {
+    font-size: 1.17em;
 }
 
 main #our-cakes .cakes-box {
@@ -204,7 +248,16 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     }
 }
 
+.carousel-item {
+    background-color: var(--body-font-color);
+    color:black;
+    display:flex;
+    align-items:center;
+}
 
+.reviev {
+    color: white;
+}
 
 
 
