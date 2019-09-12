@@ -248,16 +248,55 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     }
 }
 
-.carousel-item {
-    background-color: var(--body-font-color);
-    color:black;
-    display:flex;
-    align-items:center;
-}
 
-.reviev {
+.carousel-inner {
+    background-color: var(--logo-background-color);
+    min-height: 380px;
     color: white;
+    padding-top: 10px;
 }
 
+.carousel-item {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-left: 19%;
+    padding-right: 19%
+}
+
+.carousel-control-prev-icon {
+    width: 30px;
+    height: 60px;
+}
+
+.carousel-control-next-icon {
+    width: 30px;
+    height: 60px;
+}
+
+@media(min-width: 570px) {
+    .carousel-inner {
+        background-color: var(--logo-background-color);
+        min-height: 380px;
+        color: white;
+    }
+
+    .carousel-item {
+        padding-top: 50px;
+        padding-bottom: 0px;
+        padding-left: 30%;
+        padding-right: 30%
+    }
+
+    .carousel-control-prev-icon {
+    width: 30px;
+    height: 60px;
+    }
+
+    .carousel-control-next-icon {
+    width: 30px;
+    height: 60px;
+    }
+    }
+}
 
 
