@@ -168,7 +168,7 @@ main #our-cakes h2 {
 }
 
 h3 {
-    font-size: 1.17em;
+    font-size: 1.15em;
 }
 
 main #our-cakes .cakes-box {
@@ -245,6 +245,18 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
         display: flex;
         flex-direction: column;
     }
+
+    main #our-cakes .cakes-box .cake-item .cake-item-heading {
+        height: 30px;
+        padding-top: 5%;
+    }
+
+    main #our-cakes .cakes-box .cake-item .cake-item-paragraph {
+        height: 70px;
+        padding-top: 5%;
+    }
+
+
 }
 
 .carousel-inner {
