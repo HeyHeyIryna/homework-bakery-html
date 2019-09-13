@@ -296,6 +296,10 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     }
 }
 
+main #feedback {
+    padding-bottom: 50px;
+}
+
 main #feedback .feedback-img img {
     display: block;
     width: 100%;
@@ -350,8 +354,42 @@ main #feedback .feedback-form .form-btn {
 
 @media(min-width: 570px){
     main #feedback .feedback-form {
-    padding: 0 20% 0 20%;
+    padding: 0 20% 30px 20%;
     display: flex;
     flex-direction: column;
+    }
+}
+
+footer #contacts {
+    color: #f7f6f6;
+    background-color: var(--title-font-color);
+    font-size: 0.8rem;
+}
+
+footer #contacts .contacts-title {
+    padding-top: 20px;
+}
+
+footer #contacts .contacts-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10% 20px 10%
+}
+
+footer #contacts .social img {
+    width: 40px;
+    height: 40px;
+    margin-top: 1%;
+}
+
+footer #contacts .contacts-text {
+    margin: 0;
+}
+
+@media(min-width: 570px){
+    footer #contacts .contacts-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20% 20px 20%
     }
 }
