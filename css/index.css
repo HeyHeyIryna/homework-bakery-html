@@ -134,7 +134,9 @@ h2 {
 main #about .mobile-cake {
     display: block;
     width: 100%;
-    }
+}
+
+
 
 main #about .descktop-cake {
     display: none;
@@ -143,6 +145,8 @@ main #about .descktop-cake {
 main #about .article {
     padding: 0 3% 8% 3%
 }
+
+
 
 @media(min-width: 570px){
     main #about {
@@ -163,6 +167,8 @@ main #about .article {
     }
 }
 
+
+
 main #our-cakes h2 {
     display: none;
 }
@@ -175,6 +181,8 @@ main #our-cakes .cakes-box {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+
 
 main #our-cakes .cakes-box .cake-item {
     display: flex;
@@ -210,6 +218,8 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want {
     transition: all 0.2s;
     background-color: var(--about-background-color);
 }
+
+
 
 main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     background-color: var(--button-pressed);
@@ -249,6 +259,8 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
 }
 
 
+
+
 .carousel-inner {
     background-color: var(--logo-background-color);
     min-height: 380px;
@@ -273,7 +285,7 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     height: 60px;
 }
 
-@media(min-width: 570px) {
+@media(min-width: 570px){
     .carousel-inner {
         background-color: var(--logo-background-color);
         min-height: 380px;
@@ -284,7 +296,7 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
         padding-top: 50px;
         padding-bottom: 0px;
         padding-left: 30%;
-        padding-right: 30%
+        padding-right: 30%;
     }
 
     .carousel-control-prev-icon {
@@ -296,23 +308,26 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     width: 30px;
     height: 60px;
     }
-    }
 }
 
-main #feedback .one {
+main #feedback .feedback-img img {
     display: block;
+    width: 100%;
 }
 
-main #feedback .one {
+main #feedback .feedback-img #descktop-cheese {
     display: none;
 }
 
-@media(min-width: 570px) {
-main #feedback .one {
-    display: none;
-}
-
-main #feedback .one {
+@media(min-width: 570px){
+    main #feedback .feedback-img #descktop-cheese {
     display: block;
 }
+
+    main #feedback .feedback-img {
+    display: flex;
 }
+
+}
+
+
