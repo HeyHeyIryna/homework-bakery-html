@@ -136,8 +136,6 @@ main #about .mobile-cake {
     width: 100%;
 }
 
-
-
 main #about .descktop-cake {
     display: none;
 }
@@ -145,8 +143,6 @@ main #about .descktop-cake {
 main #about .article {
     padding: 0 3% 8% 3%
 }
-
-
 
 @media(min-width: 570px){
     main #about {
@@ -167,8 +163,6 @@ main #about .article {
     }
 }
 
-
-
 main #our-cakes h2 {
     display: none;
 }
@@ -181,8 +175,6 @@ main #our-cakes .cakes-box {
     display: grid;
     grid-template-columns: 1fr;
 }
-
-
 
 main #our-cakes .cakes-box .cake-item {
     display: flex;
@@ -219,8 +211,6 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want {
     background-color: var(--about-background-color);
 }
 
-
-
 main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     background-color: var(--button-pressed);
     cursor: pointer;
@@ -234,7 +224,6 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
     text-align: center;
     font-size: 0.85em;
 }
-
 
 @media(min-width: 570px){
     main #our-cakes {
@@ -257,9 +246,6 @@ main #our-cakes .cakes-box .cake-item .cake-item-content .want:hover {
         flex-direction: column;
     }
 }
-
-
-
 
 .carousel-inner {
     background-color: var(--logo-background-color);
@@ -322,12 +308,50 @@ main #feedback .feedback-img #descktop-cheese {
 @media(min-width: 570px){
     main #feedback .feedback-img #descktop-cheese {
     display: block;
-}
+    }
 
     main #feedback .feedback-img {
     display: flex;
+    }
 }
 
+main #feedback .feedback-form {
+    padding: 0 5% 0 5%;
+    display: flex;
+    flex-direction: column;
 }
 
+main #feedback .feedback-form input {
+    height: 28px;
+    border-radius: 0px;
+    margin: 10px 0 10px 0;
+}
 
+main #feedback .feedback-form textarea {
+    height: 150px;
+    border-radius: 0px;
+}
+
+main #feedback .feedback-form .form-btn {
+    display: inline-block;
+    padding: 5px 30px 5px 30px;
+    border: 1px solid var(--button-border);
+    margin: 0 0.3em 0.3em 0;
+    color: var(--title-font-color);
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: var(--about-background-color);
+    align-self: center;
+}
+
+@media(min-width: 570px){
+    main #feedback .feedback-form {
+    padding: 0 20% 0 20%;
+    display: flex;
+    flex-direction: column;
+    }
+}
