@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cake.css">
+    <title>Cheesecake</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <p class="logo"><a href="index.html">Mama's Bakery</a></p>
+                <img class="menu-icon" src="img/png/menu-icon.png" alt="Меню"  role="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            </div>
+            <div class="pos-f-t">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <ul class="menu-drop">
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-about" >Про нас</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-our-cakes">Торти</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-reviews">Відгуки</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-contacts">Контакти</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-max-width">
+                <ul class="menu">
+                    <li><a href="index.html#about">Про нас</a></li>
+                    <li><a href="index.html#our-cakes">Торти</a></li>
+                    <li><a href="index.html#reviews">Відгуки</a></li>
+                    <li><a href="index.html#contacts">Контакти</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-max-width">
+    <a href="index.html#feedback">main</a>
+        <section id="item">
+            <div class="item-img">
+                <img class="item-img-desk" src="img/cheese-buy-desktop.jpg" alt="Чізкейк Нью-Йорк">
+                <img class="item-img-mob" src="img/cheese-buy-mobile.jpg" alt="Чізкейк Нью-Йорк">
+            </div>
+            <div class="info-block">
+                <div class="order-info">
+                    <h2>Чізкейк Нью-Йорк</h2>
+                    <p class="item-text">Традиційний чізкейк з начинкою з вершкового сиру та основою з пісочного печива.</p>
+                    <p class="item-text">Склад: крем-сир, мука, масло, цукор, яйця, сіль.</p>
+                    <br>
+                    <p class="item-text">Калорійність: 504 Ккал</p>
+                    <p class="item-text">Термін придатності: 3 дні</p>
+
+                </div>
+                <form class="buy-form">
+                   <div class="buy-group">
+                        <label>
+                            <input type="checkbox" name="no-shugar" value="no-shugar">Без цукру
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="no-gluten" value="no-gluten">Без глютену
+                        </label>
+                        <br>
+                        <input type="submit" class="form-btn" value="Купити">
+                    </div>
+                    <div class="count-group">
+                        <p class="price">450 грн.</p>
+                        <p class="weight">950 г</p>
+                        <input class="number" type="number" name="amount">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="try">
+            <h2>Спробуй також</h2>
+            <div class="try-box">
+
+                <div class="cake-item">
+                    <div class="cake-item-img">
+                        <img src="img/brownie.jpg" alt="Брауні">
+                    </div>
+                    <div class="cake-item-content">
+                        <h3 class="cake-item-heading">Брауні</h3>
+                        <p class="cake-item-paragraph">
+                            Знамените шоколадне тістечко з карамельною текстурою та насиченим какао-смаком.
+                        </p>
+                        <button class="want">Хочу</button>
+                    </div>
+                </div>
+
+                <div class="cake-item">
+                    <div class="cake-item-img">
+                        <img src="img/pumpkin.jpg" alt="Гарбузовий пиріг">
+                    </div>
+                    <div class="cake-item-content">
+                        <h3 class="cake-item-heading">Гарбузовий пиріг</h3>
+                        <p class="cake-item-paragraph">
+                            Ніжна й ароматна гарбузово-вершкова начинка та крихка основа.
+                        </p>
+                        <button class="want">Хочу</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="contacts">
+            <h2 class="contacts-title">Контакти</h2>
+            <div class="contacts-block">
+                <div class="contact information">
+                    <p class="contacts-text">
+                        м.Львів, вул.Федьковича 60а
+                    </p>
+                    <p class="contacts-text">
+                        1-ий поверх
+                    </p>
+                    <p class="contacts-text">
+                        тел. +38(032)2356898
+                    </p>
+                    <p class="contacts-text">
+                        Працюємо щодня з 10:00 до 22:00
+                    </p>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/"><img src="img/png/fb.png" alt="Facebook" ></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/cake.js"></script>
+</body>
+</html>

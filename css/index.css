@@ -185,6 +185,10 @@ main #our-cakes .cakes-box .cake-item .cake-item-img {
     min-width: 50%;
 }
 
+.reverse {
+    order: 2;
+}
+
 main #our-cakes .cakes-box .cake-item .cake-item-img img {
     display: block;
     width: 100%;
@@ -196,6 +200,7 @@ main #our-cakes .cakes-box .cake-item .cake-item-content {
     align-items: center;
     justify-content: center;
     }
+
 
 main #our-cakes .cakes-box .cake-item .cake-item-content .want {
     display: inline-block;
