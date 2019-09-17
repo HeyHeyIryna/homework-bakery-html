@@ -3,18 +3,43 @@
             "id": "1",
             "title": "Чізкейк Нью-Йорк",
             "imageMain": "img/cheesecake.jpg",
-            "description": "Традиційний чізкейк з начинкою з вершкового сиру та основою з пісочного печива."
+            "imgBuyDesk": "img/cheese-buy-desktop.jpg",
+            "imgBuyMob": "img/cheese-buy-mobile.jpg",
+            "alt": "Чізкейк Нью-Йорк",
+            "description": "Традиційний чізкейк з начинкою з вершкового сиру та основою з пісочного печива.",
+            "ingridients": "Склад: крем-сир, мука, масло, цукор, яйця, сіль.",
+            "calories": "504 Ккал",
+            "expiration": "3 дні",
+            "price": 450,
+            "weight": "950 г"
+
         },
         {
             "id": "2",
             "title": "Брауні",
             "imageMain": "img/brownie.jpg",
-            "description": "Знамените шоколадне тістечко з карамельною текстурою та насиченим какао-смаком."
+            "imgBuyDesk": "img/brownie-buy-desktop.jpg",
+            "imgBuyMob": "img/brownie-buy-mobile.jpg",
+            "alt": "Брауні",
+            "description": "Знамените шоколадне тістечко з карамельною текстурою та насиченим какао-смаком.",
+            "ingridients": "Склад: шоколад, мука, масло, цукор, яйця, сіль.",
+            "calories": "550 Ккал",
+            "expiration": "3 дні",
+            "price": 440,
+            "weight": "950 г"
         },
         {
             "id": "3",
             "title": "Гарбузовий пиріг",
             "imageMain": "img/pumpkin.jpg",
-            "description": "Ніжна й ароматна гарбузово-вершкова начинка та крихка основа."
+            "imgBuyDesk": "img/pumpkin-buy-desktop.jpg",
+            "imgBuyMob": "img/pumpkin-buy-mobile.jpg",
+            "alt": "Гарбузовий пирі",
+            "description": "Ніжна й ароматна гарбузово-вершкова начинка та крихка основа.",
+            "ingridients": "Склад: гарбуз, вершки, мука, масло, цукор, яйця, сіль.",
+            "calories": "490 Ккал",
+            "expiration": "3 дні",
+            "price": 420,
+            "weight": "910 г"
         }
     ]

@@ -4,6 +4,7 @@ $('#nav-reviews').click( () => location='#reviews' );
 $('#nav-contacts').click( () => location='#contacts' );
 
 
+
 fetch('cakes.json')
     .then(result => result.json())
     .then(cakesList => cakesList.forEach( cake => addCake(cake)));
@@ -19,7 +20,16 @@ function addCake(cakeData) {
                         <p class="cake-item-paragraph">
                         ${cakeData.description}
                         </p>
-                        <button class="want">Хочу</button>
+                        <div class="want-button">
+                            <button class="want">Хочу</button>
+                        </div>
                     </div>
                 </div>`;
 }
+
+$('.cakes-box').on('click', '.want-button', function() {
+  sessionStorage.setItem('title', $( this ).siblings().first().text());
+  location = 'cake.html';
+});
+
+
