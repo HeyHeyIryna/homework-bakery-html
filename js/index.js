@@ -32,4 +32,22 @@ $('.cakes-box').on('click', '.want-button', function() {
   location = 'cake.html';
 });
 
+// console.log(sessionStorage.getItem('cart'))
+
+
+// $('.modal-btn').click( function() {
+//     let x = [];
+//     x = sessionStorage.getItem('cart'));
+//     console.log(x);
+// })
+
+
+// document.querySelector('."btn btn-primary').click( function() {
+//     let x = JSON.parse(sessionStorage.getItem('cart'))
+//     console.log('parsed json ' + x)
+// })
+
+
+
+document.querySelector('.modal-body').textContent = sessionStorage.getItem('cart');
 

@@ -412,3 +412,11 @@ footer #contacts .contacts-text {
     }
 }
 
+.logo-black {
+    font-family: 'Arizonia', sans-sarif;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    margin: 0 0;
+}

@@ -19,7 +19,7 @@ function fillPage(cake) {
             </div>
             <div class="info-block">
                 <div class="order-info">
-                    <h2>${cake.title}</h2>
+                    <h2 class="item-title">${cake.title}</h2>
                     <p class="item-text">${cake.description}</p>
                     <p class="item-text">${cake.ingridients}</p>
                     <br>
@@ -29,11 +29,11 @@ function fillPage(cake) {
                 <form class="buy-form">
                 <div class="buy-group">
                         <label>
-                            <input type="checkbox" name="no-shugar" value="no-shugar">Без цукру
+                            <input class="no-shugar" type="checkbox" name="no-shugar" value="no-shugar">Без цукру
                         </label>
                         <br>
                         <label>
-                            <input type="checkbox" name="no-gluten" value="no-gluten">Без глютену
+                            <input class="no-gluten" type="checkbox" name="no-gluten" value="no-gluten">Без глютену
                         </label>
                         <br>
                         <input type="submit" class="form-btn" value="Купити">
@@ -41,7 +41,7 @@ function fillPage(cake) {
                     <div class="count-group">
                         <p class="price">${cake.price} грн</p>
                         <p class="weight">${cake.weight} г</p>
-                        <input class="number" type="number" name="amount">
+                        <input class="number" type="number" name="amount" value=1>
                     </div>
                 </form>
             </div>`;
@@ -68,3 +68,25 @@ $('.try-box').on('click', '.want-button', function() {
   sessionStorage.setItem('title', $( this ).siblings().first().text());
   location = 'cake.html';
 });
+
+$('.item').on('click', '.form-btn', function(submit) {
+    submit.preventDefault();
+    let orderedCake = {};
+    orderedCake.title = document.querySelector('.item-title').textContent;
+    orderedCake.number = document.querySelector('.number').value;
+    if(document.querySelector('.no-shugar').checked) {
+        orderedCake.shugar = 'Без цукру';
+    } else {
+        orderedCake.shugar = null;
+    }
+    if(document.querySelector('.no-gluten').checked) {
+        orderedCake.gluten = 'Без глютену';
+    } else {
+        orderedCake.gluten = null;
+    }
+
+    sessionStorage.setItem('cart', sessionStorage.getItem('cart') + JSON.stringify(orderedCake))
+    console.log(sessionStorage.getItem('cart'))
+});
+
+console.log(sessionStorage.getItem('cart'))
