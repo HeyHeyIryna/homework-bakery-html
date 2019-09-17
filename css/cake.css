@@ -22,7 +22,7 @@ header nav .logo-container .logo a {
     padding: 5% 5% 5% 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .item-text {
@@ -94,6 +94,11 @@ text-align: center;
     .info-block {
     padding: 0 3% 0 3%;
     }
+}
+
+#try {
+    background-color: #f7f6f6;
+
 }
 
 .try-box {

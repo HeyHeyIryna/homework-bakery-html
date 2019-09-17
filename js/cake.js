@@ -25,7 +25,6 @@ function fillPage(cake) {
                     <br>
                     <p class="item-text">Калорійність: ${cake.calories}</p>
                     <p class="item-text">Термін придатності: ${cake.expiration}</p>
-
                 </div>
                 <form class="buy-form">
                 <div class="buy-group">
@@ -46,5 +45,26 @@ function fillPage(cake) {
                     </div>
                 </form>
             </div>`;
+    } else {
+        document.querySelector('.try-box').innerHTML +=
+            `<div class="cake-item">
+                <div class="cake-item-img">
+                    <img src="${cake.imageMain}" alt="${cake.title}">
+                </div>
+                <div class="cake-item-content">
+                    <h3 class="cake-item-heading">${cake.title}</h3>
+                    <p class="cake-item-paragraph">
+                        ${cake.description}
+                    </p>
+                    <div class="want-button">
+                        <button class="want">Хочу</button>
+                    </div>
+                </div>
+            </div>`
     }
 }
+
+$('.try-box').on('click', '.want-button', function() {
+  sessionStorage.setItem('title', $( this ).siblings().first().text());
+  location = 'cake.html';
+});
