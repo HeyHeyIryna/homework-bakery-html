@@ -40,7 +40,7 @@ function fillPage(cake) {
                             <input class="no-gluten" type="checkbox" name="no-gluten" value="no-gluten">Без глютену
                         </label>
                         <br>
-                        <input type="submit" class="form-btn" value="Купити">
+                        <input type="submit" class="form-btn" data-toggle="modal" data-target="#alert" value="Купити">
                     </div>
                     <div class="count-group">
                         <p class="price"><span class="price-num">${cake.price}</span> грн</p>
@@ -101,6 +101,8 @@ $('.item').on('click', '.form-btn', function(submit) {
         newCart.push(JSON.stringify(orderedCake));
         sessionStorage.setItem('cart', newCart)
     }
+    document.querySelector('.cart-icon').style.display = 'block';
+
 });
 
         console.log(sessionStorage.getItem('cart'));
@@ -123,7 +125,7 @@ $('#cart-btn').click( function() {
                 <span class="cart-number">${cartItem.number}</span>
                 <span class="cart-price">${cartItem.price}</span>
             </p>`
-        total += Number(cartItem.price);
+        total += Number(cartItem.price) * Number(cartItem.number);
     }
 
     document.querySelector('.modal-body').innerHTML +=
