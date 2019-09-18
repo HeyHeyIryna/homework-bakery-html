@@ -3,7 +3,7 @@ $('#nav-cake-our-cakes').click( () => location='index.html#our-cakes' );
 $('#nav-cake-reviews').click( () => location='index.html#reviews' );
 $('#nav-cake-contacts').click( () => location='index.html#contacts' );
 
-console.log(sessionStorage.getItem('title'));
+// console.log(sessionStorage.getItem('title'));
 let passedTitle = sessionStorage.getItem('title');
 
 fetch('cakes.json')
@@ -39,7 +39,7 @@ function fillPage(cake) {
                         <input type="submit" class="form-btn" value="Купити">
                     </div>
                     <div class="count-group">
-                        <p class="price">${cake.price} грн</p>
+                        <p class="price"><span class="price-num">${cake.price}</span> грн</p>
                         <p class="weight">${cake.weight} г</p>
                         <input class="number" type="number" name="amount" value=1>
                     </div>
@@ -74,19 +74,30 @@ $('.item').on('click', '.form-btn', function(submit) {
     let orderedCake = {};
     orderedCake.title = document.querySelector('.item-title').textContent;
     orderedCake.number = document.querySelector('.number').value;
+    orderedCake.price = document.querySelector('.price-num').textContent;
+    console.log(orderedCake.price)
     if(document.querySelector('.no-shugar').checked) {
         orderedCake.shugar = 'Без цукру';
     } else {
-        orderedCake.shugar = null;
+        orderedCake.shugar = 'no';
     }
     if(document.querySelector('.no-gluten').checked) {
         orderedCake.gluten = 'Без глютену';
     } else {
-        orderedCake.gluten = null;
+        orderedCake.gluten = 'no';
     }
 
-    sessionStorage.setItem('cart', sessionStorage.getItem('cart') + JSON.stringify(orderedCake))
-    console.log(sessionStorage.getItem('cart'))
+    if(sessionStorage.getItem('cart')) {
+        let cart = [];
+        cart.push(sessionStorage.getItem('cart'));
+        cart.push(JSON.stringify(orderedCake));
+        sessionStorage.setItem('cart', cart);
+    } else {
+        let newCart = [];
+        newCart.push(JSON.stringify(orderedCake));
+        sessionStorage.setItem('cart', newCart)
+    }
 });
 
-console.log(sessionStorage.getItem('cart'))
+        console.log(sessionStorage.getItem('cart'));
+

@@ -32,14 +32,38 @@ $('.cakes-box').on('click', '.want-button', function() {
   location = 'cake.html';
 });
 
-// console.log(sessionStorage.getItem('cart'))
 
 
-// $('.modal-btn').click( function() {
-//     let x = [];
-//     x = sessionStorage.getItem('cart'));
-//     console.log(x);
-// })
+
+$('.modal-btn').click( function() {
+    let orderArrey = [];
+    orderArrey = sessionStorage.getItem('cart');
+    let cartList = orderArrey.split('"},');
+    for(let i = 0; i < cartList.length - 1; i++){
+        cartList[i] = cartList[i] + '"}';
+    }
+    let total = 0;
+    for(let i = 0; i < cartList.length; i++){
+        let cartItem = JSON.parse(cartList[i]);
+        console.log(cartItem);
+        document.querySelector('.modal-body').innerHTML +=
+            `<p class="modal-cake-line">
+                °<span class="cart-cake">${cartItem.title}</span>
+                <span class="cart-number">${cartItem.number}</span>
+                <span class="cart-price">${cartItem.price}</span>
+            </p>`
+        total += Number(cartItem.price);
+    }
+
+    document.querySelector('.modal-body').innerHTML +=
+        `<p class="total"><span class="total-text">Всього до оплати </span><span class="total-summ">${total}</span></p>`
+    console.log(total);
+
+    // document.querySelector('.modal-body').textContent = sessionStorage.getItem('cart');
+
+
+
+})
 
 
 // document.querySelector('."btn btn-primary').click( function() {
@@ -49,5 +73,60 @@ $('.cakes-box').on('click', '.want-button', function() {
 
 
 
-document.querySelector('.modal-body').textContent = sessionStorage.getItem('cart');
+// document.querySelector('.modal-body').textContent = sessionStorage.getItem('cart');
 
+
+
+
+
+// let t = sessionStorage.getItem('new');
+
+// let arr = t.split('"},');
+
+// arr[0] = arr[0] + '"}';
+// for(let i = 0; i < arr.length; i++)
+// {
+//     let b = JSON.parse(arr[i])
+// }
+
+
+
+
+
+
+// let q = {};
+
+// q.w = 'fff';
+// q.m = 'aaa';
+
+// console.log(JSON.stringify(q))
+
+// let z = {};
+
+// z.w = 'ggg';
+// z.m = 'jjj';
+
+// let o = [];
+// o.push(JSON.stringify(q));
+// o.push(JSON.stringify(z));
+// console.log(o);
+
+// sessionStorage.setItem('new', o);
+
+// let t = sessionStorage.getItem('new');
+
+// // console.log(t);
+// let arr = t.split('"},');
+// // console.log(arr);
+// arr[0] = arr[0] + '"}';
+// console.log(arr[0]);
+
+// console.log(JSON.parse(arr[0]))
+
+// console.log(arr.length)
+
+// for(let i = 0; i < arr.length; i++)
+// {
+//     let b = JSON.parse(arr[i])
+//     console.log(b.w)
+// }

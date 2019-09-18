@@ -420,3 +420,27 @@ footer #contacts .contacts-text {
     padding: 10px;
     margin: 0 0;
 }
+
+.modal-cake-line{
+    display: flex;
+    align-content: space-between;
+}
+
+.cart-cake {
+    width: 70%;
+}
+
+.cart-number {
+    width: 10%;
+}
+
+.total {
+    display: flex;
+    align-content: space-between;
+    font-weight: bold;
+
+}
+
+.total-text {
+    width: 80%;
+}
