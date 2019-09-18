@@ -13,27 +13,30 @@
     <header>
         <nav>
             <div class="logo-container">
-                <p class="logo"><a href="index.html">Mama's Bakery</a></p>
-                <img class="menu-icon" src="img/png/menu-icon.png" alt="Меню"  role="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="logo-div"><p class="logo"><a href="index.html">Mama's Bakery</a></p></div>
+                <div class="icons">
+                    <img class="cart-icon" id="cart-btn" src="img/png/cart.png" alt="Кошик" role="button" class="cart-on-btn" data-toggle="modal" data-target="#exampleModal">
+                    <img class="menu-icon" src="img/png/menu-icon.png" alt="Меню"  role="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                </div>
             </div>
             <div class="pos-f-t">
                 <div class="collapse" id="navbarToggleExternalContent">
                     <div class="bg-dark p-4">
                         <ul class="menu-drop">
-                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-about" >Про нас</li>
-                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-our-cakes">Торти</li>
-                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-reviews">Відгуки</li>
-                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-cake-contacts">Контакти</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-about" >Про нас</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-our-cakes">Торти</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-reviews">Відгуки</li>
+                            <li data-toggle="collapse" data-target="#navbarToggleExternalContent" id="nav-contacts">Контакти</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="container-max-width">
                 <ul class="menu">
-                    <li><a href="index.html#about">Про нас</a></li>
-                    <li><a href="index.html#our-cakes">Торти</a></li>
-                    <li><a href="index.html#reviews">Відгуки</a></li>
-                    <li><a href="index.html#contacts">Контакти</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#our-cakes">Торти</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
                 </ul>
             </div>
         </nav>
@@ -131,6 +134,32 @@
             </div>
         </section>
     </footer>
+
+            <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <p class="logo-black">Mama's Bakery</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- <p class="modal-cake-line">
+                    <span class="cart-cake">торт</span> <span class="cart-number">1</span>
+                </p> -->
+                <p class="total">
+                    <!-- <span class="total-text">Всього до оплати: </span><span class="total-summ"></span> -->
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Купити</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

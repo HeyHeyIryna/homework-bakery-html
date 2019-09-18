@@ -3,6 +3,9 @@ $('#nav-our-cakes').click( () => location='#our-cakes' );
 $('#nav-reviews').click( () => location='#reviews' );
 $('#nav-contacts').click( () => location='#contacts' );
 
+if(sessionStorage.getItem('cart') === null){
+    document.querySelector('.cart-icon').style.display = 'none';
+}
 
 
 fetch('cakes.json')
@@ -35,7 +38,8 @@ $('.cakes-box').on('click', '.want-button', function() {
 
 
 
-$('.modal-btn').click( function() {
+$('#cart-btn').click( function() {
+    console.log('hello');
     let orderArrey = [];
     orderArrey = sessionStorage.getItem('cart');
     let cartList = orderArrey.split('"},');
@@ -48,7 +52,7 @@ $('.modal-btn').click( function() {
         console.log(cartItem);
         document.querySelector('.modal-body').innerHTML +=
             `<p class="modal-cake-line">
-                °<span class="cart-cake">${cartItem.title}</span>
+                <span class="cart-cake">${cartItem.title}</span>
                 <span class="cart-number">${cartItem.number}</span>
                 <span class="cart-price">${cartItem.price}</span>
             </p>`
@@ -58,75 +62,12 @@ $('.modal-btn').click( function() {
     document.querySelector('.modal-body').innerHTML +=
         `<p class="total"><span class="total-text">Всього до оплати </span><span class="total-summ">${total}</span></p>`
     console.log(total);
-
-    // document.querySelector('.modal-body').textContent = sessionStorage.getItem('cart');
-
-
-
 })
 
+$('.close').click( function() {
+    document.querySelector('.modal-body').innerHTML = ``;
+})
 
-// document.querySelector('."btn btn-primary').click( function() {
-//     let x = JSON.parse(sessionStorage.getItem('cart'))
-//     console.log('parsed json ' + x)
-// })
-
-
-
-// document.querySelector('.modal-body').textContent = sessionStorage.getItem('cart');
-
-
-
-
-
-// let t = sessionStorage.getItem('new');
-
-// let arr = t.split('"},');
-
-// arr[0] = arr[0] + '"}';
-// for(let i = 0; i < arr.length; i++)
-// {
-//     let b = JSON.parse(arr[i])
-// }
-
-
-
-
-
-
-// let q = {};
-
-// q.w = 'fff';
-// q.m = 'aaa';
-
-// console.log(JSON.stringify(q))
-
-// let z = {};
-
-// z.w = 'ggg';
-// z.m = 'jjj';
-
-// let o = [];
-// o.push(JSON.stringify(q));
-// o.push(JSON.stringify(z));
-// console.log(o);
-
-// sessionStorage.setItem('new', o);
-
-// let t = sessionStorage.getItem('new');
-
-// // console.log(t);
-// let arr = t.split('"},');
-// // console.log(arr);
-// arr[0] = arr[0] + '"}';
-// console.log(arr[0]);
-
-// console.log(JSON.parse(arr[0]))
-
-// console.log(arr.length)
-
-// for(let i = 0; i < arr.length; i++)
-// {
-//     let b = JSON.parse(arr[i])
-//     console.log(b.w)
-// }
+$('#exampleModal').on('hidden.bs.modal', function() {
+  document.querySelector('.modal-body').innerHTML = ``;
+})

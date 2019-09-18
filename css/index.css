@@ -48,6 +48,13 @@ header nav .logo-container .menu-icon {
     box-sizing: content-box;
     }
 
+.cart-icon {
+    width: 60px;
+    height: 60px;
+    padding-right: 10px;
+    box-sizing: content-box;
+    }
+
 header nav .logo-container .menu-icon:hover {
     cursor: pointer;
 }
@@ -117,8 +124,26 @@ header nav .menu {
     }
 
     header nav .logo-container{
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 90% 10%;
+
     }
+
+    .logo-div {
+        padding-left: 10%;
+    }
+
+    .logo {
+        text-align: center;
+        padding-left: 10%;
+    }
+
+    .cart-icon {
+        width: 60px;
+        height: 60px;
+        padding-right: 20px;
+        box-sizing: content-box;
+     }
 }
 
 h2 {
