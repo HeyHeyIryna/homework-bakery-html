@@ -39,7 +39,6 @@ $('.cakes-box').on('click', '.want-button', function() {
 
 
 $('#cart-btn').click( function() {
-    console.log('hello');
     let orderArrey = [];
     orderArrey = sessionStorage.getItem('cart');
     let cartList = orderArrey.split('"},');
@@ -52,17 +51,53 @@ $('#cart-btn').click( function() {
         console.log(cartItem);
         document.querySelector('.modal-body').innerHTML +=
             `<p class="modal-cake-line">
+                <span class="checkmark">✓</span>
                 <span class="cart-cake">${cartItem.title}</span>
                 <span class="cart-number">${cartItem.number}</span>
                 <span class="cart-price">${cartItem.price}</span>
+                <span class="cart-delete">X</span>
             </p>`
         total += Number(cartItem.price);
     }
 
     document.querySelector('.modal-body').innerHTML +=
         `<p class="total"><span class="total-text">Всього до оплати </span><span class="total-summ">${total}</span></p>`
-    console.log(total);
 })
+
+
+$('.modal-body').on('click', '.cart-delete', function() {
+
+    let cake = $( this ).siblings('.cart-cake').text()
+    let number = $( this ).siblings('.cart-number').text()
+    let price = $( this ).siblings('.cart-price').text()
+    let line = '{"title":"' + cake + '","number":"' + number + '","price":"' + price + '"}'
+
+    // $( this ).parent().remove();
+
+    let orderArrey = [];
+    orderArrey = sessionStorage.getItem('cart');
+    console.log(orderArrey);
+    if (orderArrey.includes(line + ',')) {
+        orderArrey.replace(line + ',', '');
+    } else if (orderArrey.includes(line)) {
+        console.log('hello')
+        orderArrey.replace(line, '');
+    }
+    console.log(orderArrey);
+
+
+
+
+})
+
+// $('.cakes-box').on('click', '.want-button', function() {
+//   sessionStorage.setItem('title', $( this ).siblings().first().text());
+//   location = 'cake.html';
+// });
+
+
+
+
 
 $('.close').click( function() {
     document.querySelector('.modal-body').innerHTML = ``;
