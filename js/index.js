@@ -36,8 +36,6 @@ $('.cakes-box').on('click', '.want-button', function() {
 });
 
 
-
-
 $('#cart-btn').click( function() {
     let orderArrey = [];
     orderArrey = sessionStorage.getItem('cart');
@@ -84,10 +82,6 @@ $('.modal-body').on('click', '.cart-delete', function() {
         orderArrey.replace(line, '');
     }
     console.log(orderArrey);
-
-
-
-
 })
 
 // $('.cakes-box').on('click', '.want-button', function() {
@@ -97,12 +91,20 @@ $('.modal-body').on('click', '.cart-delete', function() {
 
 
 
-
-
 $('.close').click( function() {
     document.querySelector('.modal-body').innerHTML = ``;
 })
 
 $('#exampleModal').on('hidden.bs.modal', function() {
   document.querySelector('.modal-body').innerHTML = ``;
+})
+
+$('#buy').click( function() {
+    document.querySelector('.modal-body').innerHTML = ``;
+})
+
+$('#finalOrder').click( function() {
+    document.querySelector('.modal-body').innerHTML = ``;
+    document.querySelector('.cart-icon').style.display = 'none';
+    sessionStorage.clear();
 })

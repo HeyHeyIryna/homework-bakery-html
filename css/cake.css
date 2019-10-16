@@ -174,3 +174,74 @@ text-align: center;
 .modal-header {
     border-bottom: none;
 }
+
+.modal-cake-line{
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+}
+
+.checkmark {
+    width: 7%;
+    font-family: 'Arizonia', sans-sarif;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.cart-cake {
+    width: 60%;
+}
+
+.cart-number {
+    width: 10%;
+}
+
+.cart-price {
+    width: 15%;
+}
+
+.cart-delete {
+    font-family: 'Arizonia', sans-sarif;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+
+}
+
+.cart-delete:hover {
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    align-content: space-between;
+    font-weight: bold;
+
+}
+
+.total-text {
+    width: 77%;
+    padding-left: 7%;
+}
+
+
+.modal-buy-form {
+    padding: 0 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-buy-form input {
+    height: 28px;
+    border-radius: 0px;
+    margin: 10px 0 10px 0;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}

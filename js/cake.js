@@ -109,7 +109,6 @@ $('.item').on('click', '.form-btn', function(submit) {
         console.log(sessionStorage.getItem('cart'));
 
 $('#cart-btn').click( function() {
-    console.log('hello');
     let orderArrey = [];
     orderArrey = sessionStorage.getItem('cart');
     let cartList = orderArrey.split('"},');
@@ -122,16 +121,17 @@ $('#cart-btn').click( function() {
         console.log(cartItem);
         document.querySelector('.modal-body').innerHTML +=
             `<p class="modal-cake-line">
+                <span class="checkmark">✓</span>
                 <span class="cart-cake">${cartItem.title}</span>
                 <span class="cart-number">${cartItem.number}</span>
                 <span class="cart-price">${cartItem.price}</span>
+                <span class="cart-delete">X</span>
             </p>`
-        total += Number(cartItem.price) * Number(cartItem.number);
+        total += Number(cartItem.price);
     }
 
     document.querySelector('.modal-body').innerHTML +=
         `<p class="total"><span class="total-text">Всього до оплати </span><span class="total-summ">${total}</span></p>`
-    console.log(total);
 })
 
 $('.close').click( function() {
@@ -140,4 +140,14 @@ $('.close').click( function() {
 
 $('#exampleModal').on('hidden.bs.modal', function() {
   document.querySelector('.modal-body').innerHTML = ``;
+})
+
+$('#buy').click( function() {
+    document.querySelector('.modal-body').innerHTML = ``;
+})
+
+$('#finalOrder').click( function() {
+    document.querySelector('.modal-body').innerHTML = ``;
+    document.querySelector('.cart-icon').style.display = 'none';
+    sessionStorage.clear();
 })
