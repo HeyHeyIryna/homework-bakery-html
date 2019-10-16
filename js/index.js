@@ -24,7 +24,7 @@ function addCake(cakeData) {
                         ${cakeData.description}
                         </p>
                         <div class="want-button">
-                            <button class="want">Хочу</button>
+                            <button class="want">Learn more</button>
                         </div>
                     </div>
                 </div>`;
@@ -59,7 +59,7 @@ $('#cart-btn').click( function() {
     }
 
     document.querySelector('.modal-body').innerHTML +=
-        `<p class="total"><span class="total-text">Всього до оплати </span><span class="total-summ">${total}</span></p>`
+        `<p class="total"><span class="total-text">Total</span><span class="total-summ">${total}</span></p>`
 })
 
 

@@ -27,24 +27,24 @@ function fillPage(cake) {
                     <p class="item-text">${cake.description}</p>
                     <p class="item-text">${cake.ingridients}</p>
                     <br>
-                    <p class="item-text">Калорійність: ${cake.calories}</p>
-                    <p class="item-text">Термін придатності: ${cake.expiration}</p>
+                    <p class="item-text">Calories: ${cake.calories}</p>
+                    <p class="item-text">Expiration: ${cake.expiration}</p>
                 </div>
                 <form class="buy-form">
                 <div class="buy-group">
                         <label>
-                            <input class="no-shugar" type="checkbox" name="no-shugar" value="no-shugar">Без цукру
+                            <input class="no-shugar" type="checkbox" name="no-shugar" value="no-shugar">Sugar free
                         </label>
                         <br>
                         <label>
-                            <input class="no-gluten" type="checkbox" name="no-gluten" value="no-gluten">Без глютену
+                            <input class="no-gluten" type="checkbox" name="no-gluten" value="no-gluten">Gluten free
                         </label>
                         <br>
-                        <input type="submit" class="form-btn" data-toggle="modal" data-target="#alert" value="Купити">
+                        <input type="submit" class="form-btn" data-toggle="modal" data-target="#alert" value="Buy Now">
                     </div>
                     <div class="count-group">
-                        <p class="price"><span class="price-num">${cake.price}</span> грн</p>
-                        <p class="weight">${cake.weight} г</p>
+                        <p class="price"><span class="price-num">${cake.price}</span> usd</p>
+                        <p class="weight">${cake.weight}</p>
                         <input class="number" type="number" name="amount" value=1>
                     </div>
                 </form>
@@ -61,7 +61,7 @@ function fillPage(cake) {
                         ${cake.description}
                     </p>
                     <div class="want-button">
-                        <button class="want">Хочу</button>
+                        <button class="want">Learn more</button>
                     </div>
                 </div>
             </div>`
@@ -131,7 +131,7 @@ $('#cart-btn').click( function() {
     }
 
     document.querySelector('.modal-body').innerHTML +=
-        `<p class="total"><span class="total-text">Всього до оплати </span><span class="total-summ">${total}</span></p>`
+        `<p class="total"><span class="total-text">Total </span><span class="total-summ">${total}</span></p>`
 })
 
 $('.close').click( function() {
