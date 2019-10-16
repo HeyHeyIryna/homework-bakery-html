@@ -10,7 +10,7 @@
             "ingridients": "Ingredients: cream cheese, flour, butter, sugar, eggs, salt.",
             "calories": "504 kcal",
             "expiration": "3 days",
-            "price": 20.55,
+            "price": 20,
             "weight": "950 g"
 
         },
@@ -25,7 +25,7 @@
             "ingridients": "Ingredients: chocolate, flour, butter, sugar, eggs, salt.",
             "calories": "550 kcal",
             "expiration": "3 days",
-            "price": 19.99,
+            "price": 19,
             "weight": "950 g"
         },
         {
@@ -39,7 +39,7 @@
             "ingridients": "Ingredients: pumpkin, cream, flour, butter, sugar, eggs, salt.",
             "calories": "490 kcal",
             "expiration": "3 dsys",
-            "price": 18.95,
+            "price": 18,
             "weight": "910 g"
         }
     ]

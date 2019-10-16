@@ -55,7 +55,7 @@ $('#cart-btn').click( function() {
                 <span class="cart-price">${cartItem.price}</span>
                 <span class="cart-delete">X</span>
             </p>`
-        total += Number(cartItem.price);
+        total += Number(cartItem.price * cartItem.number);
     }
 
     document.querySelector('.modal-body').innerHTML +=
