@@ -3,7 +3,6 @@ $('#nav-cake-our-cakes').click( () => location='index.html#our-cakes' );
 $('#nav-cake-reviews').click( () => location='index.html#reviews' );
 $('#nav-cake-contacts').click( () => location='index.html#contacts' );
 
-// console.log(sessionStorage.getItem('title'));
 let passedTitle = sessionStorage.getItem('title');
 
 if(sessionStorage.getItem('cart') === null){
@@ -80,17 +79,6 @@ $('.item').on('click', '.form-btn', function(submit) {
     orderedCake.number = document.querySelector('.number').value;
     orderedCake.price = document.querySelector('.price-num').textContent;
     console.log(orderedCake.price)
-
-    // if(document.querySelector('.no-shugar').checked) {
-    //     orderedCake.shugar = 'Без цукру';
-    // } else {
-    //     orderedCake.shugar = 'no';
-    // }
-    // if(document.querySelector('.no-gluten').checked) {
-    //     orderedCake.gluten = 'Без глютену';
-    // } else {
-    //     orderedCake.gluten = 'no';
-    // }
 
     if(sessionStorage.getItem('cart')) {
         let cart = [];

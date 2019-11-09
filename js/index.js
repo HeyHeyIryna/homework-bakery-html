@@ -7,7 +7,6 @@ if(sessionStorage.getItem('cart') === null){
     document.querySelector('.cart-icon').style.display = 'none';
 }
 
-
 fetch('cakes.json')
     .then(result => result.json())
     .then(cakesList => cakesList.forEach( cake => addCake(cake)));
@@ -70,8 +69,6 @@ $('.modal-body').on('click', '.cart-delete', function() {
     let price = $( this ).siblings('.cart-price').text()
     let line = '{"title":"' + cake + '","number":"' + number + '","price":"' + price + '"}'
 
-    // $( this ).parent().remove();
-
     let orderArrey = [];
     orderArrey = sessionStorage.getItem('cart');
     console.log(orderArrey);
@@ -83,13 +80,6 @@ $('.modal-body').on('click', '.cart-delete', function() {
     }
     console.log(orderArrey);
 })
-
-// $('.cakes-box').on('click', '.want-button', function() {
-//   sessionStorage.setItem('title', $( this ).siblings().first().text());
-//   location = 'cake.html';
-// });
-
-
 
 $('.close').click( function() {
     document.querySelector('.modal-body').innerHTML = ``;
